@@ -2,9 +2,9 @@
 A major project Issue 
 
 
-## Members 
-Avdhesh Singh Chouhan
-Arsh Dave
-Ayush Jain
-Akshay Kumar 
-Amay Trivedi 
+## Contributers 
+Avdhesh Singh Chouhan <br>
+Arsh Dave <br>
+Ayush Jain <br>
+Akshay Kumar <br>
+Amay Trivedi <br> 
