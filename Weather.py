@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from flask import render_template,request
+from os import environ
 import requests
 app = Flask(__name__)
 
@@ -24,4 +25,5 @@ def temperature():
     return jsonify({'data':temperature_only})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(environ.get('PORT'))
+
