@@ -79,14 +79,12 @@ pre {
             })
                 .done(function(response){
                     if (response){
-                  //    alert('Hola !! Nikku')
-                      //  alert(JSON.stringify(response))
-                        var json =JSON.parse(response)
-                        console.log(json)
-                               
-                        $('#chatlog1').val(json.data)
-                         $('#chatlog2').html("Temprature of your city is: "+json.data*10)
-                        $('#chatlog2').html(json.data*10)
+                        alert(JSON.stringify(response))
+                        var final_output=JSON.stringify(response)
+                        console.log(final_output)
+                        $('#chatlog2').val(JSON.stringify(final_output.data))
+                         $('#chatlog1').val(final_output.data)
+
                     }
                     else{
                         console.log('Error'+response.error)
@@ -96,6 +94,8 @@ pre {
 event.preventDefault()
             })
     </script>
+    
+    
     <meta charset="UTF-8">
     <title>Narada MUNI</title>
 </head>
