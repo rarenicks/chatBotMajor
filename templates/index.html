@@ -2,7 +2,66 @@
 <html lang="en">
 <head>
 
-    <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+    <script>
+        
+        body {
+  font: 15px arial, sans-serif;
+  background-color: #d9d9d9;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+        
+    #bodybox {
+  margin: auto;
+  max-width: 550px;
+  font: 15px arial, sans-serif;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+  padding-left: 25px;
+  box-shadow: 5px 5px 5px grey;
+  border-radius: 15px;
+}
+
+#chatborder {
+  border-style: solid;
+  background-color: #f6f9f6;
+  border-width: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 15px;
+  border-radius: 15px;
+}
+
+.chatlog {
+   font: 15px arial, sans-serif;
+}
+
+#chatbox {
+  font: 17px arial, sans-serif;
+  height: 22px;
+  width: 100%;
+}
+
+h1 {
+  margin: auto;
+}
+
+pre {
+  background-color: #f0f0f0;
+  margin-left: 20px;
+}
+    
+    
+    </script>
      <link rel="stylesheet" href="../assets/style.css">
 
     <script>
@@ -11,7 +70,7 @@
         $('form').on('submit',function (event) {
             $.ajax({
                 data:{
-                    cityName:$('#input').val()
+                    cityName:$('#chatbox').val()
                 },
                 type:'POST',
                 url:'/temperature',
@@ -34,39 +93,23 @@ event.preventDefault()
     <meta charset="UTF-8">
     <title>Narada MUNI</title>
 </head>
-<!-- <form class="">
-    <label>Enter the city name </label>
-    <input type="text" id="input" class="input" name="input">
-    <button type="submit" id="submitBtn">Submit</button>
-    <p id="out"></p>
-</form>
-     -->
-    
-    
-    
     
     
     <div id='bodybox'>
   <div id='chatborder'>
-    <p id="chatlog7" class="chatlog">&nbsp;</p>
-    <p id="chatlog6" class="chatlog">&nbsp;</p>
-    <p id="chatlog5" class="chatlog">&nbsp;</p>
-    <p id="chatlog4" class="chatlog">&nbsp;</p>
-    <p id="chatlog3" class="chatlog">&nbsp;</p>
-    <p id="chatlog2" class="chatlog">&nbsp;</p>
-    <p id="chatlog1" class="chatlog">nbsp;</p>
-      <form class="">
 
-    <input type="text" name="chat" id="chatbox" placeholder="Hi there! Type here to talk to me." onfocus="placeHolder()">
-          <button type="submit" id="submitBtn">Submit</button>
-      </form>
-      
-
-  </div>
-  </div>
-  <br>
-  <br>
-     
+<form class="">
+    <label>Enter the city name </label>
+    <input type="text" id="chatbox" class="input" name="chatbox" placeholder="Hi there! Type here to talk to me." >
+    <button type="submit" id="submitBtn">Submit</button>
+    <p id="out"></p>
+</form>
+      </div>
+    </div>
+    
+    
+     <center><img src="http://lilgreenland.github.io/images/BMO.jpg" align="middle"></center>
+    
 <body>
 </body>
 </html>
