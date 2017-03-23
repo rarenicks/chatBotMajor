@@ -1,1 +1,1 @@
-web: python Weather.py #PORT
+web: python Weather.py $PORT
