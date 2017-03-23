@@ -45,7 +45,7 @@
    font: 15px arial, sans-serif;
 }
 
-#chatbox {
+#input {
   font: 17px arial, sans-serif;
   height: 22px;
   width: 100%;
@@ -63,23 +63,24 @@ pre {
     
     </style>
      <link rel="stylesheet" href="../assets/style.css">
-            <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+          
+    <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
 
     <script>
-        
         $(document).ready(function(){
         console.log('it works!!')
         $('form').on('submit',function (event) {
             $.ajax({
                 data:{
-                    cityName:$('#chatbox').val()
+                    cityName:$('#input').val()
                 },
                 type:'POST',
                 url:'/temperature',
             })
                 .done(function(response){
                     if (response){
-              //          alert(JSON.stringify(response))
+                  //    alert('Hola !! Nikku')
+                      //  alert(JSON.stringify(response))
                         var final_output=JSON.stringify(response)
                         console.log(final_output)
                         $('#chatlog1').val(JSON.stringify(final_output.data))
@@ -99,10 +100,16 @@ event.preventDefault()
     
     <div id='bodybox'>
   <div id='chatborder'>
-
+  <p id="chatlog7" class="chatlog">&nbsp;</p>
+    <p id="chatlog6" class="chatlog">&nbsp;</p>
+    <p id="chatlog5" class="chatlog">&nbsp;</p>
+    <p id="chatlog4" class="chatlog">&nbsp;</p>
+    <p id="chatlog3" class="chatlog">&nbsp;</p>
+    <p id="chatlog2" class="chatlog">&nbsp;</p>
+    <p id="chatlog1" class="chatlog">&nbsp;</p>
 <form class="">
     <label>Enter the city name </label>
-    <input type="text" id="chatbox" class="input" name="chatbox" placeholder="Hi there! Type here to talk to me." >
+    <input type="text" id="input" class="input" name="input" placeholder="Hi there! Type here to talk to me." >
     <button type="submit" id="submitBtn">Submit</button>
     <p id="out"></p>
 </form>
