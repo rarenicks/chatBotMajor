@@ -3,6 +3,7 @@
 <head>
 
     <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+     <link rel="stylesheet" href="../assets/style.css">
 
     <script>
         $(document).ready(function(){
@@ -17,11 +18,10 @@
             })
                 .done(function(response){
                     if (response){
-                      alert('Hola !! Nikku')
-                        alert(JSON.stringify(response))
+              //          alert(JSON.stringify(response))
                         var final_output=JSON.stringify(response)
                         console.log(final_output)
-                        $('#out').val(JSON.stringify(final_output.data))
+                        $('#chatlog1').val(JSON.stringify(final_output.data))
                     }
                     else{
                         console.log('Error'+response.error)
@@ -32,14 +32,41 @@ event.preventDefault()
             })
     </script>
     <meta charset="UTF-8">
-    <title>Weather</title>
+    <title>Narada MUNI</title>
 </head>
-<form class="">
+<!-- <form class="">
     <label>Enter the city name </label>
     <input type="text" id="input" class="input" name="input">
     <button type="submit" id="submitBtn">Submit</button>
     <p id="out"></p>
 </form>
+     -->
+    
+    
+    
+    
+    
+    <div id='bodybox'>
+  <div id='chatborder'>
+    <p id="chatlog7" class="chatlog">&nbsp;</p>
+    <p id="chatlog6" class="chatlog">&nbsp;</p>
+    <p id="chatlog5" class="chatlog">&nbsp;</p>
+    <p id="chatlog4" class="chatlog">&nbsp;</p>
+    <p id="chatlog3" class="chatlog">&nbsp;</p>
+    <p id="chatlog2" class="chatlog">&nbsp;</p>
+    <p id="chatlog1" class="chatlog">nbsp;</p>
+      <form class="">
+
+    <input type="text" name="chat" id="chatbox" placeholder="Hi there! Type here to talk to me." onfocus="placeHolder()">
+          <button type="submit" id="submitBtn">Submit</button>
+      </form>
+      
+
+  </div>
+  </div>
+  <br>
+  <br>
+     
 <body>
 </body>
 </html>
