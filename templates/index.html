@@ -81,9 +81,12 @@ pre {
                     if (response){
                   //    alert('Hola !! Nikku')
                       //  alert(JSON.stringify(response))
-                        var final_output=JSON.stringify(response)
-                        console.log(final_output)
-                        $('#chatlog1').val(JSON.stringify(final_output.data))
+                        var json =JSON.parse(response)
+                        console.log(json)
+                               
+                        $('#chatlog1').val(json.data)
+                         $('#chatlog2').html("Temprature of your city is: "+json.data*10)
+                        $('#chatlog2').html(json.data*10)
                     }
                     else{
                         console.log('Error'+response.error)
