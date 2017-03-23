@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from flask import render_template,request
-from os import environ
+import os
 import requests
 app = Flask(__name__)
 
