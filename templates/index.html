@@ -79,14 +79,12 @@ pre {
             })
                 .done(function(response){
                     if (response){
-                        alert(JSON.stringify(response))
+                      //  alert(JSON.stringify(response))
                       //  var final_output=JSON.stringify(response)
-                           $('#chatlog2').html(response.data)
-
-                       var json = JSON.parse(response)
-                        console.log(response)
-                        $('#chatlog2').html(response.data)
-                         $('#chatlog1').html(response)
+                        var output = "Tempature of your city is " + response.data 
+                        var output2 = "Tempature of your city is " + JSON.stringify(response.data);
+                           $('#chatlog1').html(output) ;
+                           $('#chatlog2').html(output2) ;
 
                     }
                     else{
