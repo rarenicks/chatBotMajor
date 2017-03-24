@@ -80,10 +80,13 @@ pre {
                 .done(function(response){
                     if (response){
                         alert(JSON.stringify(response))
-                        var final_output=JSON.stringify(response)
-                        console.log(final_output)
-                        $('#chatlog2').val(JSON.stringify(final_output.data))
-                         $('#chatlog1').val(final_output.data)
+                      //  var final_output=JSON.stringify(response)
+                           $('#chatlog2').html(response.data)
+
+                       var json = JSON.parse(response)
+                        console.log(response)
+                        $('#chatlog2').html(response.data)
+                         $('#chatlog1').html(response)
 
                     }
                     else{
