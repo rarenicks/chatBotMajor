@@ -70,6 +70,9 @@ pre {
         $(document).ready(function(){
         console.log('it works!!')
         $('form').on('submit',function (event) {
+            event.preventDefault()
+                    return false; 
+
             $.ajax({
                 data:{
                     cityName:$('#input').val()
@@ -92,7 +95,6 @@ pre {
                     }
                 })
         })
-event.preventDefault()
             })
     </script>
     
