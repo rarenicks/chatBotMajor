@@ -9,6 +9,7 @@
   background-color: #d9d9d9;
   padding-top: 15px;
   padding-bottom: 15px;
+  background-color: white;
 }
         
     #bodybox {
@@ -81,8 +82,8 @@ pre {
                     if (response){
                       //  alert(JSON.stringify(response))
                       //  var final_output=JSON.stringify(response)
-                        var output = "Tempature of your city is " + response.data/10
-                        var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+                        var output = "Tempature of "+  $('#input').val() +" is " + response.data/10
+                     //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
                            $('#chatlog1').html(output) ;
                            $('#chatlog2').html(output2) ;
 
