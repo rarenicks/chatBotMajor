@@ -70,9 +70,6 @@ pre {
         $(document).ready(function(){
         console.log('it works!!')
         $('form').on('submit',function (event) {
-            event.preventDefault()
-                    return false; 
-
             $.ajax({
                 data:{
                     cityName:$('#input').val()
@@ -84,8 +81,8 @@ pre {
                     if (response){
                       //  alert(JSON.stringify(response))
                       //  var final_output=JSON.stringify(response)
-                        var output = "Tempature of your city is " + response.data 
-                        var output2 = "Tempature of your city is " + JSON.stringify(response.data);
+                        var output = "Tempature of your city is " + response.data/10
+                        var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
                            $('#chatlog1').html(output) ;
                            $('#chatlog2').html(output2) ;
 
@@ -94,6 +91,8 @@ pre {
                         console.log('Error'+response.error)
                     }
                 })
+    return false;
+
         })
             })
     </script>
@@ -103,7 +102,8 @@ pre {
     <title>Narada MUNI</title>
 </head>
     
-    
+    <body>
+
     <div id='bodybox'>
   <div id='chatborder'>
   <p id="chatlog7" class="chatlog">&nbsp;</p>
@@ -125,6 +125,5 @@ pre {
     
      <center><img src="http://lilgreenland.github.io/images/BMO.jpg" align="middle"></center>
     
-<body>
 </body>
 </html>
