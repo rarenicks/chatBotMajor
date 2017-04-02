@@ -17,7 +17,7 @@ class DBHelper:
         self.conn.execute(ownidx)
         self.conn.execute(recentidx)
         self.conn.commit()
-
+        
     #adds the query to database
     def add_query(self, text, owner):
         stmt = "INSERT INTO log (recent, owner) VALUES (?, ?)"
