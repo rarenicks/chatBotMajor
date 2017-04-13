@@ -3,3 +3,4 @@ Jinja2==2.8.1
 gunicorn==19.6.0
 requests==2.13.0 
 fuzzywuzzy==0.15.0
+rivescript==1.02
