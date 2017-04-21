@@ -25,6 +25,7 @@ console.log('it works!!')
         data:{
             cityName:city
         },
+        async: false,
         type:'POST',
         url:'/temperature',
     })
