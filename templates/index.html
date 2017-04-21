@@ -3,7 +3,7 @@
 <head>
 
     <style>
-        
+
         body {
   font: 15px arial, sans-serif;
   background-color: #d9d9d9;
@@ -11,7 +11,7 @@
   padding-bottom: 15px;
   background-color: white;
 }
-        
+
     #bodybox {
   margin: auto;
   max-width: 550px;
@@ -60,48 +60,17 @@ pre {
   background-color: #f0f0f0;
   margin-left: 20px;
 }
-    
-    
+
+
     </style>
      <link rel="stylesheet" href="../assets/style.css">
-          
+
     <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
-
-    <script>
-        $(document).ready(function(){
-        console.log('it works!!')
-        $('form').on('submit',function (event) {
-            $.ajax({
-                data:{
-                    cityName:$('#input').val()
-                },
-                type:'POST',
-                url:'/temperature',
-            })
-                .done(function(response){
-                    if (response){
-                      //  alert(JSON.stringify(response))
-                      //  var final_output=JSON.stringify(response)
-                        var output = "Tempature of "+  $('#input').val() +" is " + response.data/10 + "° celsius"
-                     //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
-                           $('#chatlog1').html(output) ;
-                              $('#input').html(" ");
-                    }
-                    else{
-                        console.log('Error'+response.error)
-                    }
-                })
-    return false;
-
-        })
-            })
-    </script>
-    
-    
+    <script src="../js/reply.js"></script>
     <meta charset="UTF-8">
     <title>Narada MUNI</title>
 </head>
-    
+
     <body>
 
     <div id='bodybox'>
@@ -113,17 +82,15 @@ pre {
     <p id="chatlog3" class="chatlog">&nbsp;</p>
     <p id="chatlog2" class="chatlog">&nbsp;</p>
     <p id="chatlog1" class="chatlog">&nbsp;</p>
-<form class="">
+
     <label>Enter the city name </label>
-    <input type="text" id="input" class="input" name="input" placeholder="Hi there! Type here to talk to me." >
-    <button type="submit" id="submitBtn">Submit</button>
-    <p id="out"></p>
-</form>
+    <input type="text" name="chat" id="chatbox" placeholder="Hi there! Type here to talk to me.">
+    <!-- <input type="text" id="input" class="input" name="input" placeholder="Hi there! Type here to talk to me." > -->
       </div>
     </div>
-    
-    
+
+
      <center><img src="https://pbs.twimg.com/profile_images/2198931084/narad_muni.jpg" align="middle"></center>
-    
+
 </body>
 </html>

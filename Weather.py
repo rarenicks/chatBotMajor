@@ -10,8 +10,6 @@ def home():
 
 @app.route('/temperature',methods=['POST'])
 def temperature():
-
-
     cityName=request.form['cityName']
     getRequests=requests.get('http://api.openweathermap.org/data/2.5/weather?q='+cityName+',uk&appid=59026d61966be7eab971e0e48eb22bbc')
     print(getRequests.text)
@@ -28,4 +26,3 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.debug = True
     app.run(host='0.0.0.0', port=port)
-
