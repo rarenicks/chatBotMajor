@@ -17,6 +17,33 @@ var messages = [], //array that hold the record of each string in chat
 //****************************************************************
 //****************************************************************
 //****************************************************************
+
+function tempCall(city)
+{
+console.log('it works!!')
+    $.ajax({
+        data:{
+            cityName:city
+        },
+        type:'POST',
+        url:'/temperature',
+    })
+        .done(function(response){
+            if (response){
+              //  alert(JSON.stringify(response))
+              //  var final_output=JSON.stringify(response)
+                var output = "Tempature of "+  city +" is " + response.data/10 + "° celsius"
+             //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+              return output;
+            }
+            else{
+              return("error");
+            }
+        })
+  }
+
+
+
 //edit this function to change what the chatbot says
 function chatbotResponse() {
   talking = true;
@@ -30,8 +57,9 @@ function chatbotResponse() {
   }
   else {
      city = lastUserMessage;
-     botMessage =tempCall(city);
 
+     var replyFromWeatherAPI = tempCall(city);
+     botMessage  = replyFromWeatherAPI;
     }
 
   }
@@ -111,27 +139,3 @@ function keyPress(e) {
 // ###################################################################################
 // ######################  WHETHER API HIT JS CODE START #############################
 // ###################################################################################
-
-function tempCall(city)
-{
-console.log('it works!!')
-    $.ajax({
-        data:{
-            cityName:city
-        },
-        type:'POST',
-        url:'/temperature',
-    })
-        .done(function(response){
-            if (response){
-              //  alert(JSON.stringify(response))
-              //  var final_output=JSON.stringify(response)
-                var output = "Tempature of "+  city +" is " + response.data/10 + "° celsius"
-             //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
-              return output;
-            }
-            else{
-              return("error");
-            }
-        })
-  }
