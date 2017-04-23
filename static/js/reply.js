@@ -7,6 +7,7 @@ var messages = [], //array that hold the record of each string in chat
   lastUserMessage = "", //keeps track of the most recent input string from the user
   botMessage = "", //var keeps track of what the chatbot is going to say
   botName = 'Narada Muni', //name of the chatbot
+  userName = 'Me',
   talking = true; //when false the speach function doesn't work
 //
 //
@@ -85,7 +86,7 @@ function newEntry() {
     //sets the chat box to be clear
     document.getElementById("chatbox").value = "";
     //adds the value of the chatbox to the array messages
-    messages.push(lastUserMessage);
+    messages.push("<b>" + userName + ":</b> " +lastUserMessage);
     //Speech(lastUserMessage);  //says what the user typed outloud
     //sets the variable botMessage in response to lastUserMessage
     chatbotResponse();
