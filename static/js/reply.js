@@ -86,7 +86,7 @@ function newEntry() {
     //sets the chat box to be clear
     document.getElementById("chatbox").value = "";
     //adds the value of the chatbox to the array messages
-    messages.push("<b>" + userName + ":</b> " +lastUserMessage);
+    messages.push(lastUserMessage + ":<b>" + userName + "</b> ");
     //Speech(lastUserMessage);  //says what the user typed outloud
     //sets the variable botMessage in response to lastUserMessage
     chatbotResponse();
