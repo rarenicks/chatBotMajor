@@ -59,9 +59,14 @@ function chatbotResponse() {
   }
   else {
      city = lastUserMessage;
+        
+        var replyFromWeatherAPI = tempCall(city);
+        $( document ).ajaxStop(function() {
+        botMessage  = replyFromWeatherAPI;
+        });
 
-     var replyFromWeatherAPI = tempCall(city);
-     botMessage  = replyFromWeatherAPI;
+//     var replyFromWeatherAPI = tempCall(city);
+     
     }
 
   }
