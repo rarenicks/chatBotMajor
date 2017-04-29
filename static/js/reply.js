@@ -22,14 +22,13 @@ var messages = [], //array that hold the record of each string in chat
 
 
 
-function newsCall(sources)
+function newsCall()
 {
 console.log('it works!!')
-    $.ajax({
-
+  var reqNews = $.ajax({
 
         type:'GET',
-        url:'/sources',
+        url:'/articles',
     })
         .done(function(response){
             if (response){
@@ -74,7 +73,7 @@ console.log('it works!!')
   function riveCall(input)
   {
   console.log('rives works!!')
-      $.ajax({
+      var reqRive = $.ajax({
           data:{
               From:"Avdhesh",
               Body:input
@@ -108,6 +107,17 @@ function chatbotResponse() {
   else if (lastUserMessage === 'name') {
       botMessage = 'My name is ' + botName;
   }
+  else if (lastUserMessage === 'news') {
+    reqNews.then(success);
+    var success = function(){
+
+      var replyFromRive = newsCall();
+      botMessage  = replyFromRive;
+      console.log("from success "+ botMessage );
+    }
+    console.log("outside success "+ botMessage );
+
+  }
   // else {
   //    city = lastUserMessage;
   //
@@ -118,8 +128,14 @@ function chatbotResponse() {
   //
   //   }
   else {
-      var replyFromRive = riveCall(lastUserMessage);
-      botMessage  = replyFromRive;
+
+      reqRive.then(function(){
+        var replyFromRive = riveCall(lastUserMessage);
+        botMessage  = replyFromRive;
+        console.log("from then "+ botMessage );
+      }
+
+
       console.log(replyFromRive);
   }
 
