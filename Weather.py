@@ -8,7 +8,7 @@ from rivescript import RiveScript
 
 bot = RiveScript()
 bot.load_directory(
-    os.path.join(os.path.dirname(__file__), " ", "brain")
+    os.path.join(os.path.dirname(__file__), "brain")
 )
 bot.sort_replies()
 
