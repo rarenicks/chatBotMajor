@@ -133,7 +133,7 @@ function chatbotResponse() {
         var replyFromRive = riveCall(lastUserMessage);
         botMessage  = replyFromRive;
         console.log("from then "+ botMessage );
-      }
+      });
 
 
       console.log(replyFromRive);
