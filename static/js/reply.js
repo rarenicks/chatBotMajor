@@ -44,6 +44,30 @@ console.log('it works!!')
         })
   }
 
+  function riveCall(input)
+  {
+  console.log('rives works!!')
+      $.ajax({
+          data:{
+              From:"Avdhesh",
+              Body:input
+          },
+          type:'POST',
+          url:'/rive',
+      })
+          .done(function(response){
+              if (response){
+                //  alert(JSON.stringify(response))
+                //  var final_output=JSON.stringify(response)
+                  var output =  response
+               //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+                return output;
+              }
+              else{
+                return("error");
+              }
+          })
+    }
 
 
 //edit this function to change what the chatbot says
@@ -57,17 +81,20 @@ function chatbotResponse() {
   else if (lastUserMessage === 'name') {
       botMessage = 'My name is ' + botName;
   }
+  // else {
+  //    city = lastUserMessage;
+  //
+  //       var replyFromWeatherAPI = tempCall(city);
+  //       $( document ).ajaxStop(function() {
+  //       botMessage  = replyFromWeatherAPI;
+  //       });
+  //
+  //   }
   else {
-     city = lastUserMessage;
-        
-        var replyFromWeatherAPI = tempCall(city);
-        $( document ).ajaxStop(function() {
-        botMessage  = replyFromWeatherAPI;
-        });
-
-//     var replyFromWeatherAPI = tempCall(city);
-     
-    }
+      var replyFromRive = riveCall(lastUserMessage);
+      botMessage  = replyFromRive;
+      console.log(replyFromRive);
+  }
 
   }
 
