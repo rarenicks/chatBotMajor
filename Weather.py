@@ -52,7 +52,21 @@ def hello_rivescript():
 #    resp.message(reply)
     return str(reply)
 
-
+@app.route('/articles',methods=['POST'])
+def news():
+    cityName=request.form['articlesName']
+    getRequests = requests.get("https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=latest&apiKey=90b5a2960a63444da339b3cd7a1327d9")
+    print(getRequests.text)
+    #print(cityName)
+    jsonObject=getRequests.text
+    #return jsonObject
+    ans = getRequests.json()
+    result = ans['articles']
+    for i in range(5):
+        msg = msg + (result[i]['description'])
+        msg = msg + '\n'
+    #print(json_Parser)
+    return jsonify({'data':msg})
 
 
 if __name__ == '__main__':

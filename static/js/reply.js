@@ -1,4 +1,4 @@
-//links
+﻿//links
 //http://eloquentjavascript.net/09_regexp.html
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 //nlp = window.nlp_compromise;
@@ -18,6 +18,33 @@ var messages = [], //array that hold the record of each string in chat
 //****************************************************************
 //****************************************************************
 //****************************************************************
+
+
+
+
+function newsCall(sources)
+{
+console.log('it works!!')
+    $.ajax({
+
+
+        type:'GET',
+        url:'/sources',
+    })
+        .done(function(response){
+            if (response){
+              //  alert(JSON.stringify(response))
+              //  var final_output=JSON.stringify(response)
+                var output = "Todays Hot News Are " + response.data
+             //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+              return output;
+            }
+            else{
+              return("error");
+            }
+        })
+ }
+
 
 function tempCall(city)
 {
