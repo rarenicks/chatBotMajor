@@ -52,7 +52,6 @@ function chatbotResponse() {
 
   }
       dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
-      break;
 }
 
 function initScreen() {
