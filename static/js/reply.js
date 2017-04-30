@@ -70,6 +70,32 @@ console.log('it works!!')
         })
   }
 
+
+  function shortAnswers(ques)
+{
+console.log('it works!!')
+    $.ajax({
+        data:{
+            question:ques
+        },
+        async: false,
+        type:'POST',
+        url:'/v1',
+    })
+        .done(function(response){
+            if (response){
+              //  alert(JSON.stringify(response))
+              //  var final_output=JSON.stringify(response)
+                var output = "Your answer is:"+ response.data"
+             //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+              return output;
+            }
+            else{
+              return("error");
+            }
+        })
+  }
+
   function riveCall(input)
   {
   console.log('rives works!!')

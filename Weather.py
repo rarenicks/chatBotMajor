@@ -34,6 +34,19 @@ def temperature():
     #print(json_Parser)
     return jsonify({'data':temperature_only})
 
+@app.route('/v1',methods=['POST'])
+def shortAnswers():
+
+
+    question=request.form['question']
+    WOLF_URL = "http://api.wolframalpha.com/v1/"
+    SHORT_ANS_URL = WOLF_URL + "result?i=question%3F&appid={}".format(wolfram_api_key)
+
+    response = requests.get(SHORT_ANS_URL)
+    answer=response.text
+    return jsonify({'data':answer})
+
+
 
 @app.route("/rive", methods=["GET", "POST"])
 def hello_rivescript():
