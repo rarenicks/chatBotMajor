@@ -86,7 +86,7 @@ console.log('it works!!')
             if (response){
               //  alert(JSON.stringify(response))
               //  var final_output=JSON.stringify(response)
-                var output = "Your answer is:"+ response.data"
+                var output = "Your answer is:"+ response.data
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
               return output;
             }

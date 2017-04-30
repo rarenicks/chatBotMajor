@@ -18,6 +18,11 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/codepen')
+def codepen():
+    return render_template('codepen.html')
+
+
 @app.route('/temperature',methods=['POST'])
 def temperature():
 
