@@ -117,10 +117,10 @@ console.log('it works!!')
  lastUserMessage = document.mainscreen.BasicTextArea4.value;
  dialog = dialog + "User: " + lastUserMessage +  '\r' + "\n";
   chatbotResponse();
-  setTimeout(function () {
+  
   dialog = dialog  +  '\r' + "\n";
   updatescreen()
-},5000);
+
 
 }
 
@@ -134,10 +134,10 @@ function chatbotResponse() {
   }
   else if (lastUserMessage === 'news') {
 
-      setTimeout(function () {
+      
       var replyFromRive = newsCall();
       botMessage  = replyFromRive;
-    }, 4000);
+    
 
   }
   // else {
@@ -150,11 +150,9 @@ function chatbotResponse() {
   //
   //   }
   else {
-    setTimeout(function () {
     var replyFromRive = riveCall(lastUserMessage);
     botMessage  = replyFromRive;
 
-    }, 4000);
 
 
   }
