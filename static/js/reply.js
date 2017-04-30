@@ -134,14 +134,9 @@ function chatbotResponse() {
       botMessage = 'My name is ' + botName;
   }
   else if (lastUserMessage === 'news') {
-    reqNews.then(success);
-    var success = function(){
 
       var replyFromRive = newsCall();
       botMessage  = replyFromRive;
-      console.log("from success "+ botMessage );
-    }
-    console.log("outside success "+ botMessage );
 
   }
   // else {
@@ -155,14 +150,9 @@ function chatbotResponse() {
   //   }
   else {
 
-      reqRive.then(function(){
         var replyFromRive = riveCall(lastUserMessage);
         botMessage  = replyFromRive;
-        console.log("from then "+ botMessage );
-      });
 
-
-      console.log(replyFromRive);
   }
 
   }
