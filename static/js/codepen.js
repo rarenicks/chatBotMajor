@@ -20,6 +20,9 @@ console.log('it works!!')
               //  var final_output=JSON.stringify(response)
                 var output = "Todays Hot News Are " + response.data
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+               
+                botMessage = output;
+                dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
               return output;
             }
             else{
@@ -71,7 +74,7 @@ console.log('it works!!')
               //  alert(JSON.stringify(response))
               //  var final_output=JSON.stringify(response)
                 var output = "Your answer is:"+ response.data
-             //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+             //   var output2 = "Tempature of your city is " + JSON.stringify(r
               return output;
             }
             else{
@@ -97,7 +100,9 @@ console.log('it works!!')
                 //  var final_output=JSON.stringify(response)
                   var output =  response
                //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
-                return output;
+                  botMessage = output;
+                  dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+                  return output;
               }
               else{
                 return("error");
@@ -148,11 +153,12 @@ function chatbotResponse() {
     setTimeout(function () {
     var replyFromRive = riveCall(lastUserMessage);
     botMessage  = replyFromRive;
+
     }, 4000);
 
 
   }
-      dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+    
 }
 
 function initScreen() {
