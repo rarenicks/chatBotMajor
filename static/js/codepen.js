@@ -115,7 +115,7 @@ console.log('it works!!')
   setTimeout(function () {
   dialog = dialog  +  '\r' + "\n";
   updatescreen()
-},1000);
+},5000);
 
 }
 
@@ -132,7 +132,7 @@ function chatbotResponse() {
       setTimeout(function () {
       var replyFromRive = newsCall();
       botMessage  = replyFromRive;
-    }, 1000);
+    }, 4000);
 
   }
   // else {
@@ -148,7 +148,7 @@ function chatbotResponse() {
     setTimeout(function () {
     var replyFromRive = riveCall(lastUserMessage);
     botMessage  = replyFromRive;
-    }, 1000);
+    }, 4000);
 
 
   }
