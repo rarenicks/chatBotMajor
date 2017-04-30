@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+      <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+
+      <link rel="stylesheet" href= "{{ url_for('static',filename='styles/codepen.css') }}">
+      <script src="{{ url_for('static',filename='js/codepen.js') }}"></script>
+
+        <meta charset="UTF-8">
+    <title>Narada MUNI</title>
+</head>
+
+
+<body onLoad="initScreen()">
+
+  <form name="mainscreen" onkeypress="if(event.keyCode == 13) {mainroutine();return false}"><br />
+
+    <table align="center">
+      <tr>
+        <td>
+
+
+          <h1>Chatbot Olivia Project</h1>
+          <br />
+
+          <div class="row">
+            <div class="col-sm-4">
+
+              <h2>Chat with Olivia</h2>
+              <img src="http://i67.tinypic.com/20rsba1.jpg" alt="Olivia AI" style="width:250px;height:250px;align:left;">
+              <br />
+              <h3>Interact with Specific Inputs</h3>
+              <br />
+              <p>Use the following inputs for magic 8ball responses: 8ball + question with no ?(punctuation)</p>
+
+              <p1>Enter: myfortune :and Olivia will tell you your personal fortune</p1>
+            </div>
+            <div class="col-sm-8">
+
+              Message History<br />
+              <textarea name="BasicTextArea1" rows="15" cols="75"></textarea><br /> Olivia Says<br />
+              <textarea name="BasicTextArea2" rows="2" cols="75"></textarea><br /> Your Last Input<br />
+              <textarea name="BasicTextArea3" rows="2" cols="75"></textarea><br /> Type Here and Hit "Enter"<br />
+              <textarea name="BasicTextArea4" rows="2" cols="75"></textarea>
+
+        </td>
+      </tr>
+    </table>
+
+    <p2>
+      <input id=runbutton class="button" type="button" value="Enter" name="run_button" onClick="mainroutine()">
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /></p2>
+      <p3>
+      <input id=runbutton class="button" type="button" value="Run Test" name="run_button" onClick="runtest()">
+    </p3>
+  </form>
+
+  </div>
+  </div>
+
+
+</body>
+</html>

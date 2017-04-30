@@ -1,0 +1,70 @@
+body {
+  color: white;
+  background-image: url('http://i63.tinypic.com/14ujpdt.jpg');
+  font-family: Helvetica;
+  font-size: 12pt;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.button {
+  color: white;
+  background-color: black;
+  font-family: Helvetica;
+  font-size: 12pt;
+  height: 50px;
+  width: 150px;
+  border: solid #cd1fee 10px;
+  border-radius: 25px;
+  box-shadow: black 2px 2px 2px 2px;
+}
+
+textarea {
+  color: white;
+  background-color: black;
+  border: solid #cd1fee 10px;
+  border-radius: 15px;
+  font-family: arial;
+  font-size: 12pt;
+  box-shadow: black 2px 2px 2px 2px;
+}
+
+select {
+  font-family: arial;
+  font-size: 10pt;
+  width: 350px;
+  margin-left: 0px;
+}
+
+td {
+  font-family: arial;
+  font-size: 10pt;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+h2 {
+  align: left;
+  margin: 20px 20px 20px 20px;
+}
+
+img {
+  align: left;
+  border: solid #cd1fee 10px;
+  border-radius: 100%;
+  box-shadow: black 2px 2px 2px 2px;
+  margin: 20px 20px 20px 20px;
+}
+p2  {
+  text-align: center;
+  margin-left: 53%;
+}
+p3  {
+  text-align: center;
+  margin-left: 53%;
+}
