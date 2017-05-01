@@ -9,13 +9,13 @@ dialog = ""
   function checkToken(result)
   {
  	 tempResult = result ;
-   var splitter=[];
-   splitter=result.split("")
+  
+   var splitter=result.split(" ");
  	 if(result.includes("Temperature") || result.includes("temperature") || result.includes("Weather") || result.includes("weather"))
  	 {
 
  		 var city=splitter.splice(-1);
- 		 alert(city)
+// 		 alert(city)
 
 console.log('it works!!')
     $.ajax({
@@ -81,8 +81,8 @@ else if(result.includes("News") || result.includes("news"))
        $.ajax({
           data:{
               From:"Avdhesh",
-              Body:input
-          },
+              Body:tempResult
+          }
           type:'POST',
           url:'/rive',
       })
