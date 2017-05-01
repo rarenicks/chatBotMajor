@@ -12,7 +12,13 @@ function checkToken(result)
 	 if(result.includes("?"))
 	 {
 	 
-	 shortAnswers(tempResult);
+	 botMessage = shortAnswers(tempResult);
+		 console.log(botMessage)
+		 var out = "" + botMessage.data 
+			console.log(out)
+		  dialog = dialog + "Narada Muni : " + out +  '\r' + "\n";
+		 
+		 document.mainscreen.BasicTextArea4.value = ""
 		updatescreen() 
 	 }
 	 
@@ -146,7 +152,7 @@ console.log('it works!!')
   }
 
 
-  function shortAnswers(ques)
+function shortAnswers(ques)
 {
 console.log('it works!!')
     $.ajax({
