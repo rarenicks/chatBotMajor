@@ -12,11 +12,11 @@ function checkToken(result)
 	 {
 		 var splitter=result.split("")
 
-		 var city=result.splice(-1);
-		 alert(city)
+		 var city=splitter.splice(-1);
+		 
 		 //hit temperature api
 
-		 console.log('it works!!')
+		 console.log('in temp!!')
     $.ajax({
         data:{
             cityName:city
