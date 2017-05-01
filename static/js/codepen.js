@@ -8,7 +8,7 @@ dialog = ""
 function checkToken(result)
  {
 	 tempResult = result ;
-	 if(result.search("Temperature") || result.search("temperature") || result.search("Weather") || result.search("weather"))
+	 if(result.includes("Temperature") || result.includes("temperature") || result.includes("Weather") || result.includes("weather"))
 	 {
 		 var splitter=result.split("")
 
@@ -38,7 +38,7 @@ function checkToken(result)
             }
         })
 	 }
-	 else if(result.search("News") || result.search("news"))
+	 else if(result.includes("News") || result.includes("news"))
 	 {
 		 //hit news api
 		 console.log('it works!!')
@@ -199,16 +199,8 @@ function chatbotResponse() {
   if (lastUserMessage === 'hi') {
     botMessage = 'Howdy!';
   }
-  else if (lastUserMessage === 'name') {
-      botMessage = 'My name is ' + botName;
-  }
-  else if (lastUserMessage === 'news') {
-
-      
-      var replyFromRive = newsCall();
-     // botMessage  = replyFromRive;
-    
-
+  else{
+  checkToken(lastUserMessage)
   }
   // else {
   //    city = lastUserMessage;
@@ -219,13 +211,7 @@ function chatbotResponse() {
   //       });
   //
   //   }
-  else {
-    var replyFromRive = riveCall(lastUserMessage);
-//    botMessage  = replyFromRive;
-
-
-
-  }
+  
     
 }
 
