@@ -150,7 +150,6 @@ console.log('it works!!')
         data:{
             question:ques
         },
-        async: false,
         type:'POST',
         url:'/v1',
     })
