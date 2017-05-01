@@ -23,6 +23,9 @@ console.log('it works!!')
                
                 botMessage = output;
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+                 dialog = dialog  +  '\r' + "\n";
+                 updatescreen()
+
               return output;
             }
             else{
@@ -49,6 +52,7 @@ console.log('it works!!')
               //  var final_output=JSON.stringify(response)
                 var output = "Tempature of "+  city +" is " + response.data/10 + "° celsius"
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+                
               return output;
             }
             else{
@@ -102,6 +106,9 @@ console.log('it works!!')
                //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
                   botMessage = output;
                   dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+                  dialog = dialog  +  '\r' + "\n";
+                  updatescreen()
+
                   return output;
               }
               else{
@@ -116,11 +123,7 @@ console.log('it works!!')
  function mainroutine() {
  lastUserMessage = document.mainscreen.BasicTextArea4.value;
  dialog = dialog + "User: " + lastUserMessage +  '\r' + "\n";
-  chatbotResponse();
-  
-  dialog = dialog  +  '\r' + "\n";
-  updatescreen()
-
+ chatbotResponse();
 
 }
 
@@ -136,7 +139,7 @@ function chatbotResponse() {
 
       
       var replyFromRive = newsCall();
-      botMessage  = replyFromRive;
+     // botMessage  = replyFromRive;
     
 
   }
@@ -151,7 +154,7 @@ function chatbotResponse() {
   //   }
   else {
     var replyFromRive = riveCall(lastUserMessage);
-    botMessage  = replyFromRive;
+//    botMessage  = replyFromRive;
 
 
 
