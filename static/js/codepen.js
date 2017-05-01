@@ -29,7 +29,7 @@ function checkToken(result)
             if (response){
               //  alert(JSON.stringify(response))
               //  var final_output=JSON.stringify(response)
-                var output = "Tempature of "+  city +" is " + response.data/10 + "° celsius"
+                var output = "Temperature of given city is " + response.data/10 + "° celsius"
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
 		
                 botMessage = output;
