@@ -6,37 +6,17 @@ dialog = ""
 //-----The Core Code------
 
 
-function newsCall()
-{
-console.log('it works!!')
-  $.ajax({
+  function checkToken(result)
+  {
+ 	 tempResult = result ;
+   var splitter=[];
+   splitter=result.split("")
+ 	 if(result.includes("Temperature") || result.includes("temperature") || result.includes("Weather") || result.includes("weather"))
+ 	 {
 
-        type:'GET',
-        url:'/articles',
-    })
-        .done(function(response){
-            if (response){
-              //  alert(JSON.stringify(response))
-              //  var final_output=JSON.stringify(response)
-                var output = "Todays Hot News Are " + response.data
-             //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
-               
-                botMessage = output;
-                dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
-                 dialog = dialog  +  '\r' + "\n";
-                 updatescreen()
+ 		 var city=splitter.splice(-1);
+ 		 alert(city)
 
-              return output;
-            }
-            else{
-              return("error");
-            }
-        })
- }
-
-
-function tempCall(city)
-{
 console.log('it works!!')
     $.ajax({
         data:{
@@ -50,19 +30,85 @@ console.log('it works!!')
             if (response){
               //  alert(JSON.stringify(response))
               //  var final_output=JSON.stringify(response)
-                var output = "Tempature of "+  city +" is " + response.data/10 + "° celsius"
+              var output = "Tempature of "+  city +" is " + response.data/10 + "° celsius"
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
-                
+             botMessage = output;
+             dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+             dialog = dialog  +  '\r' + "\n";
+             updatescreen()
+
               return output;
             }
             else{
               return("error");
             }
         })
-  }
+
+}
+
+else if(result.includes("News") || result.includes("news"))
+{
+
+  console.log('news works!!')
+    $.ajax({
+
+          type:'GET',
+          url:'/articles',
+      })
+          .done(function(response){
+              if (response){
+                //  alert(JSON.stringify(response))
+                //  var final_output=JSON.stringify(response)
+                  var output = "Todays Hot News Are " + response.data
+               //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+
+                  botMessage = output;
+                  dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+                   dialog = dialog  +  '\r' + "\n";
+                   updatescreen()
+
+                return output;
+              }
+              else{
+                return("error");
+              }
+          })
 
 
-  function shortAnswers(ques)
+}
+  else {
+  console.log('rives works!!')
+       $.ajax({
+          data:{
+              From:"Avdhesh",
+              Body:input
+          },
+          type:'POST',
+          url:'/rive',
+      })
+          .done(function(response){
+              if (response){
+                //  alert(JSON.stringify(response))
+                //  var final_output=JSON.stringify(response)
+                  var output =  response
+               //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+                  botMessage = output;
+                  dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+                  dialog = dialog  +  '\r' + "\n";
+                  updatescreen()
+
+//                  return output;
+              }
+              else{
+                return("error");
+              }
+          })
+    }
+
+
+}
+
+function shortAnswers(ques)
 {
 console.log('it works!!')
     $.ajax({
@@ -87,37 +133,6 @@ console.log('it works!!')
         })
   }
 
-  function riveCall(input)
-  {
-  console.log('rives works!!')
-       $.ajax({
-          data:{
-              From:"Avdhesh",
-              Body:input
-          },
-          type:'POST',
-          url:'/rive',
-      })
-          .done(function(response){
-              if (response){
-                //  alert(JSON.stringify(response))
-                //  var final_output=JSON.stringify(response)
-                  var output =  response
-               //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
-                  botMessage = output;
-                  dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
-                  dialog = dialog  +  '\r' + "\n";
-                  updatescreen()
-
-                  return output;
-              }
-              else{
-                return("error");
-              }
-          })
-    }
-
-
 
 //-------
  function mainroutine() {
@@ -132,35 +147,11 @@ function chatbotResponse() {
   if (lastUserMessage === 'hi') {
     botMessage = 'Howdy!';
   }
-  else if (lastUserMessage === 'name') {
-      botMessage = 'My name is ' + botName;
+  else{
+      checkToken(lastUserMessage);
   }
-  else if (lastUserMessage === 'news') {
-
-      
-      var replyFromRive = newsCall();
-     // botMessage  = replyFromRive;
-    
 
   }
-  // else {
-  //    city = lastUserMessage;
-  //
-  //       var replyFromWeatherAPI = tempCall(city);
-  //       $( document ).ajaxStop(function() {
-  //       botMessage  = replyFromWeatherAPI;
-  //       });
-  //
-  //   }
-  else {
-    var replyFromRive = riveCall(lastUserMessage);
-//    botMessage  = replyFromRive;
-
-
-
-  }
-    
-}
 
 function initScreen() {
  updatescreen()
