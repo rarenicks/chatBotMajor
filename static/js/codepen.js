@@ -55,22 +55,24 @@ function checkToken(result)
         .done(function(response){
             if (response){
 		    console.log(response)
-		    var jsobj = JSON.parse(response)
-		    console.log(jsobj.data)
+		    console.log(response.data)
+		    var out = "" + response.data 
+// 		    var jsobj = JSON.parse(response)
+// 		    console.log(jsobj.data)
 		    
-		    var jsstr = JSON.stringify(response)
-		    		    console.log(jsstr)
-		    var jsstring = JSON.parse(jsstr)
-		    		    console.log(jsstring)
-				    console.log(jsstring.data)		    
-		    
+// 		    var jsstr = JSON.stringify(response)
+// 		    		    console.log(jsstr)
+// 		    var jsstring = JSON.parse(jsstr)
+// 		    		    console.log(jsstring)
+// 				    console.log(jsstring.data)		    
+		    console.log(out)
 		    
 		    
 		    
        //         var output = "Todays Hot News Are " + js ;
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
 
-                botMessage = newsJson;
+                botMessage = out ;
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
               return output;
             }
