@@ -45,7 +45,8 @@ def shortAnswers():
 
     question=request.form['question']
     WOLF_URL = "http://api.wolframalpha.com/v1/"
-    SHORT_ANS_URL = WOLF_URL + "result?i=question%3F&appid=5V6EGT-9UTQ4G7P5Q
+    SHORT_ANS_URL = WOLF_URL + "result?i=question%3F&appid={}".format(wolfram_api_key)
+
     response = requests.get(SHORT_ANS_URL)
     answer=response.text
     return jsonify({'data':answer})
@@ -71,8 +72,10 @@ def hello_rivescript():
 
 @app.route('/articles',methods=['GET'])
 def news():
-    msg= '' 
+    msg=''
+    cityName=request.form['articlesName']
     getRequests = requests.get("https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=latest&apiKey=90b5a2960a63444da339b3cd7a1327d9")
+    print(getRequests.text)
     #print(cityName)
     jsonObject=getRequests.text
     #return jsonObject
