@@ -55,18 +55,19 @@ function checkToken(result)
         .done(function(response){
             if (response){
 		    console.log(response)
-              //  alert(JSON.stringify(response))
-              //  var final_output=JSON.stringify(response)
-		    var js = ""
-		    var test=JSON.parse(response);
-		    var testJson=test.data
-		    //var newsJson=JSON.parse(response.data);
-		    console.log(testJson)
-		    js = js + testJson 
-		    var checkData=newJson.split("\n")
-		  	console.log(js)
-		    console.log(checkData)
-                var output = "Todays Hot News Are " + js ;
+		    var jsobj = JSON.parse(response)
+		    console.log(jsobj.data)
+		    
+		    var jsstr = JSON.stringify(response)
+		    		    console.log(jsstr)
+		    var jsstring = JSON.parse(jsstr)
+		    		    console.log(jsstring)
+				    console.log(jsstring.data)		    
+		    
+		    
+		    
+		    
+       //         var output = "Todays Hot News Are " + js ;
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
 
                 botMessage = newsJson;
