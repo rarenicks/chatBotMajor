@@ -72,9 +72,7 @@ def hello_rivescript():
 
 @app.route('/articles',methods=['GET'])
 def news():
-    cityName=request.form['articlesName']
     getRequests = requests.get("https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=latest&apiKey=90b5a2960a63444da339b3cd7a1327d9")
-    print(getRequests.text)
     #print(cityName)
     jsonObject=getRequests.text
     #return jsonObject
