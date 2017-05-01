@@ -34,6 +34,7 @@ function checkToken(result)
 		
                 botMessage = output;
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+		 document.mainscreen.BasicTextArea4.value = ""
 		 updatescreen()
               return output;
             }
@@ -55,7 +56,8 @@ function checkToken(result)
             if (response){
               //  alert(JSON.stringify(response))
               //  var final_output=JSON.stringify(response)
-                var output = "Todays Hot News Are " + response.data
+		    var newsJson=JSON.parse(response);
+                var output = "Todays Hot News Are " + newJson.data
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
 
                 botMessage = output;
