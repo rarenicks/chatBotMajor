@@ -56,25 +56,13 @@ function checkToken(result)
             if (response){
 		    console.log(response)
 		    console.log(response.data)
-		    var out = "" + response.data 
-// 		    var jsobj = JSON.parse(response)
-// 		    console.log(jsobj.data)
-		    
-// 		    var jsstr = JSON.stringify(response)
-// 		    		    console.log(jsstr)
-// 		    var jsstring = JSON.parse(jsstr)
-// 		    		    console.log(jsstring)
-// 				    console.log(jsstring.data)		    
+		    var out = "" + response.data 	    
 		    console.log(out)
 		    
-		    
-		    
-       //         var output = "Todays Hot News Are " + js ;
-             //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
-
                 botMessage = out ;
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
-		updatescreen()
+	 	document.mainscreen.BasicTextArea4.value = ""
+     		updatescreen()
 		    //              return out;
             }
             else{
@@ -111,6 +99,7 @@ console.log('it works!!')
                 botMessage = output;
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
                  dialog = dialog  +  '\r' + "\n";
+		  document.mainscreen.BasicTextArea4.value = ""
                  updatescreen()
 
               return output;
