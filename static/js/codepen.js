@@ -56,8 +56,8 @@ function checkToken(result)
             if (response){
               //  alert(JSON.stringify(response))
               //  var final_output=JSON.stringify(response)
-		    var newsJson=JSON.parse(response);
-                var output = "Todays Hot News Are " + newJson.data
+		    var newsJson=JSON.stringify(response.data);
+                var output = "Todays Hot News Are " + newJson;
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
 
                 botMessage = output;
