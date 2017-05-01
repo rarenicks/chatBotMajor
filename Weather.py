@@ -45,15 +45,9 @@ def shortAnswers():
 
     question=request.form['question']
     WOLF_URL = "http://api.wolframalpha.com/v1/"
-    SHORT_ANS_URL = WOLF_URL + "result?i=question%3F&appid=5V6EGT-9UTQ4G7P5Q    
-    SHORT_ANS_URL1 = WOLF_URL + "result?i=question&appid=5V6EGT-9UTQ4G7P5Q
-
+    SHORT_ANS_URL = WOLF_URL + "result?i=question%3F&appid=5V6EGT-9UTQ4G7P5Q
     response = requests.get(SHORT_ANS_URL)
-    response1 = requests.get(SHORT_ANS_URL1)
     answer=response.text
-     answer1=response.text
-    print(answer)
-    print(answer1)
     return jsonify({'data':answer})
 
 
