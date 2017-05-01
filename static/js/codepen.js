@@ -58,9 +58,11 @@ function checkToken(result)
               //  alert(JSON.stringify(response))
               //  var final_output=JSON.stringify(response)
 		    var js = ""
-		    var newsJson=JSON.parse(response.data);
-		    console.log(newsJson)
-		    js = js + newsJson 
+		    var test=JSON.parse(response);
+		    var testJson=test.data
+		    //var newsJson=JSON.parse(response.data);
+		    console.log(testJson)
+		    js = js + testJson 
 		    var checkData=newJson.split("\n")
 		  	console.log(js)
 		    console.log(checkData)
