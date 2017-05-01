@@ -44,7 +44,7 @@ def shortAnswers():
     question=request.form['question']
     WOLF_URL = "http://api.wolframalpha.com/v1/"
  #   SHORT_ANS_URL = WOLF_URL + "result?i=question%3F&appid={}".format(wolfram_api_key)
-    SHORT_ANS_URL = WOLF_URL + "result?i="+question+"%3F&appid={}".format(wolfram_api_key)
+    SHORT_ANS_URL = WOLF_URL + "result?i="+question+"&appid=5V6EGT-9UTQ4G7P5Q"
 
     response = requests.get(SHORT_ANS_URL)
     i = response.text
