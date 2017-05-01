@@ -8,6 +8,14 @@ dialog = ""
 function checkToken(result)
  {
 	 tempResult = result ;
+	 
+	 if(result.includes("?"))
+	 {
+	 
+	 shortAnswers(tempResult);
+	 
+	 }
+	 
 	 if(result === clear){
 		  dialog =  " " +'\r' + "\n";
 		document.mainscreen.BasicTextArea4.value = ""
