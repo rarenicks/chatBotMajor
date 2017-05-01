@@ -10,7 +10,7 @@ function checkToken(result)
 	 tempResult = result ;
 	 if(result.includes("Temperature") || result.includes("temperature") || result.includes("Weather") || result.includes("weather"))
 	 {
-		 var splitter=result.split("")
+		 var splitter=result.split(" ")
 
 		 var city=splitter.splice(-1);
 		 
