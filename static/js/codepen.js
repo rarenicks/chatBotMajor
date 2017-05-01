@@ -1,10 +1,28 @@
-
-
 lastUserMessage = ""
 botMessage = ""
 dialog = ""
 //-----The Core Code------
+function mainroutine() {
+ lastUserMessage = document.mainscreen.BasicTextArea4.value;
+ dialog = dialog + "User: " + lastUserMessage +  '\r' + "\n";
+ chatbotResponse();
 
+}
+
+//-------
+function chatbotResponse() {
+  if (lastUserMessage === 'hi') {
+    botMessage = 'Howdy!';
+  }
+  else{
+      checkToken(lastUserMessage);
+  }
+
+  }
+
+function initScreen() {
+ updatescreen()
+}
 
   function checkToken(result)
   {
@@ -135,27 +153,7 @@ console.log('it works!!')
 
 
 //-------
- function mainroutine() {
- lastUserMessage = document.mainscreen.BasicTextArea4.value;
- dialog = dialog + "User: " + lastUserMessage +  '\r' + "\n";
- chatbotResponse();
-
-}
-
-//-------
-function chatbotResponse() {
-  if (lastUserMessage === 'hi') {
-    botMessage = 'Howdy!';
-  }
-  else{
-      checkToken(lastUserMessage);
-  }
-
-  }
-
-function initScreen() {
- updatescreen()
-}
+ 
 
 //-------
 function updatescreen() {
