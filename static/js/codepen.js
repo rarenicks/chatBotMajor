@@ -12,8 +12,8 @@ function checkToken(result)
 	 {
 		 var splitter=result.split(" ")
 
-		 var city=splitter.splice(-1);
-		 
+		 var cityArr =splitter.splice(-1);
+		 var city = cityArr[0];
 		 //hit temperature api
 
 		 console.log('in temp!!')
