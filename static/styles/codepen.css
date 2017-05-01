@@ -1,6 +1,6 @@
 body {
   color: white;
-  background-image: url('http://i63.tinypic.com/14ujpdt.jpg');
+  background-image: url('back.png');
   font-family: Helvetica;
   font-size: 12pt;
   margin-top: 10px;
@@ -16,15 +16,16 @@ body {
   font-size: 12pt;
   height: 50px;
   width: 150px;
-  border: solid #cd1fee 10px;
-  border-radius: 25px;
+  float:center;
+  border: solid #240e27 10px;
+  border-radius: 13px;
   box-shadow: black 2px 2px 2px 2px;
 }
 
 textarea {
-  color: white;
-  background-color: black;
-  border: solid #cd1fee 10px;
+  color: #5ae2c9;
+  background-color: rgb(20, 4, 25);
+  border: solid :rgb(20, 4, 25) 10px;
   border-radius: 15px;
   font-family: arial;
   font-size: 12pt;
@@ -55,7 +56,7 @@ h2 {
 
 img {
   align: left;
-  border: solid #cd1fee 10px;
+  border: solid #efecef 10px;
   border-radius: 100%;
   box-shadow: black 2px 2px 2px 2px;
   margin: 20px 20px 20px 20px;
