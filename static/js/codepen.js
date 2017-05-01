@@ -31,6 +31,10 @@ function checkToken(result)
               //  var final_output=JSON.stringify(response)
                 var output = "Tempature of "+  city +" is " + response.data/10 + "° celsius"
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+		
+                botMessage = output;
+                dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+		 updatescreen()
               return output;
             }
             else{
@@ -69,6 +73,7 @@ function checkToken(result)
 	 //hit rive script
 
 		 riveCall(tempResult);
+		 
 
 	 }
  }
