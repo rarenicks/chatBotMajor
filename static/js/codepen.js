@@ -56,12 +56,17 @@ function checkToken(result)
             if (response){
               //  alert(JSON.stringify(response))
               //  var final_output=JSON.stringify(response)
-		    var newsJson=JSON.stringify(response.data);
+		    var js = ""
+		    var newsJson=JSON.parse(response.data);
+		    console.log(newsJson)
+		    js = js + newsJson 
 		    var checkData=newJson.split("\n")
-                var output = "Todays Hot News Are " + checkData;
+		  	console.log(js)
+		    console.log(checkData)
+                var output = "Todays Hot News Are " + ;
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
 
-                botMessage = output;
+                botMessage = newsJson;
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
               return output;
             }
