@@ -7,7 +7,7 @@ dialog = ""
 
 function checkToken(result)
  {
-	 tempResult = result ;
+	 tempResult = result;
 	 
 	 if(result.includes("?"))
 	 {
