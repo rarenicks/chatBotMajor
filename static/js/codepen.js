@@ -8,7 +8,12 @@ dialog = ""
 function checkToken(result)
  {
 	 tempResult = result ;
-	 if(result.includes("Temperature") || result.includes("temperature") || result.includes("Weather") || result.includes("weather"))
+	 if(result === clear){
+		  dialog =  " " +'\r' + "\n";
+		document.mainscreen.BasicTextArea4.value = ""
+		updatescreen()
+	 }
+	 else if(result.includes("Temperature") || result.includes("temperature") || result.includes("Weather") || result.includes("weather"))
 	 {
 		 var splitter=result.split(" ")
 
