@@ -48,9 +48,15 @@ def shortAnswers():
     SHORT_ANS_URL = WOLF_URL + "result?i=question%3F&appid={}".format(wolfram_api_key)
 
     response = requests.get(SHORT_ANS_URL)
-    answer=response.text
-    return jsonify({'data':answer})
-
+    i = response.text
+    j = "Wolfram|Alpha did not understand your input"
+    if (i != j):
+        print('Unmatched')
+        answer = response.text
+        return jsonify({'data': answer})
+    else:
+        a = hello_rivescript()
+        return jsonify({'data': a})
 
 
 @app.route("/rive", methods=["GET", "POST"])
