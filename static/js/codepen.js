@@ -74,7 +74,8 @@ function checkToken(result)
 
                 botMessage = out ;
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
-              return output;
+		updatescreen()
+		    //              return out;
             }
             else{
               return("error");
