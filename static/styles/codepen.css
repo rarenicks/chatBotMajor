@@ -1,6 +1,7 @@
 body {
   color: white;
   background-image: url('https://i.stack.imgur.com/gDxRP.png');
+  backgroud-repeat : repeat-x;
   font-family: Helvetica;
   font-size: 12pt;
   margin-top: 10px;
