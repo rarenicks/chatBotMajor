@@ -87,7 +87,7 @@ def news():
     result = ans['articles']
     for i in range(5):
         msg = msg + (result[i]['description'])
-        msg = msg + '\n'
+        msg = msg + '\n' + '\n' + '\n'
     #print(json_Parser)
     return jsonify({'data':msg})
 
