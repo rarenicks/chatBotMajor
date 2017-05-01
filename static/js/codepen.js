@@ -5,6 +5,73 @@ botMessage = ""
 dialog = ""
 //-----The Core Code------
 
+function checkToken(result)
+ {
+	 tempResult = result ;
+	 if(result.search("Temperature") || result.search("temperature") || result.search("Weather") || result.search("weather"))
+	 {
+		 var splitter=result.split("")
+
+		 var city=result.splice(-1);
+		 alert(city)
+		 //hit temperature api
+
+		 console.log('it works!!')
+    $.ajax({
+        data:{
+            cityName:city
+        },
+        async: false,
+        type:'POST',
+        url:'/temperature',
+    })
+        .done(function(response){
+            if (response){
+              //  alert(JSON.stringify(response))
+              //  var final_output=JSON.stringify(response)
+                var output = "Tempature of "+  city +" is " + response.data/10 + "° celsius"
+             //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+              return output;
+            }
+            else{
+              return("error");
+            }
+        })
+	 }
+	 else if(result.search("News") || result.search("news"))
+	 {
+		 //hit news api
+		 console.log('it works!!')
+		$.ajax({
+
+        type:'GET',
+        url:'/articles',
+    })
+        .done(function(response){
+            if (response){
+              //  alert(JSON.stringify(response))
+              //  var final_output=JSON.stringify(response)
+                var output = "Todays Hot News Are " + response.data
+             //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
+
+                botMessage = output;
+                dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+              return output;
+            }
+            else{
+              return("error");
+            }
+        })
+
+	 }
+	 else{
+
+	 //hit rive script
+
+		 riveCall(tempResult);
+
+	 }
+ }
 
 function newsCall()
 {
