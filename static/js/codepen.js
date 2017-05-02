@@ -27,6 +27,8 @@ function checkToken(result)
           	 console.log(botMessage)
 		 var out = "" + botMessage.data 
 	    	 console.log(out)
+		     
+	 	  document.mainscreen.BasicTextArea4.value = ""
 		  dialog = dialog + "Narada Muni : " + out +  '\r' + "\n";
 		 
 		 document.mainscreen.BasicTextArea4.value = ""
@@ -41,6 +43,8 @@ function checkToken(result)
 		 console.log(botMessage)
 		 var out = "" + botMessage.data 
 			console.log(out)
+		 
+	 	document.mainscreen.BasicTextArea4.value = ""
 		  dialog = dialog + "Narada Muni : " + out +  '\r' + "\n";
 		 
 		 document.mainscreen.BasicTextArea4.value = ""
@@ -72,6 +76,8 @@ function checkToken(result)
              //   var output2 = "Tempature of your city is " + JSON.stringify(response.data/10);
 		
                 botMessage = output;
+		    
+	 	document.mainscreen.BasicTextArea4.value = ""
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
 		 document.mainscreen.BasicTextArea4.value = ""
 		 updatescreen()
@@ -99,6 +105,8 @@ function checkToken(result)
 		    console.log(out)
 		    
                 botMessage = out ;
+		    
+	 	document.mainscreen.BasicTextArea4.value = ""
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
 	 	document.mainscreen.BasicTextArea4.value = ""
      		updatescreen()
