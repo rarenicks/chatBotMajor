@@ -237,6 +237,7 @@ console.log('it works!!')
  function mainroutine() {
  lastUserMessage = document.mainscreen.BasicTextArea4.value;
  dialog = dialog + "User: " + lastUserMessage +  '\r' + "\n";
+ clearScreen()
  chatbotResponse();
 
 }
@@ -260,6 +261,10 @@ function chatbotResponse() {
   //   }
   
     
+}
+
+function clearScreen() {
+	document.mainscreen.BasicTextArea4.value = ""
 }
 
 function initScreen() {
