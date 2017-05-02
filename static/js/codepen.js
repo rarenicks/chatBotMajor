@@ -244,10 +244,6 @@ console.log('it works!!')
 
 //-------
 function chatbotResponse() {
-  if (lastUserMessage === 'hi') {
-    botMessage = 'Howdy!';
-  }
-  else{
   checkToken(lastUserMessage)
   }
   // else {
