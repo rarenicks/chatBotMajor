@@ -30,7 +30,7 @@ function checkToken(result)
 		     
 	 	  document.mainscreen.BasicTextArea4.value = ""
 		  dialog = dialog + "Narada Muni : " + out +  '\r' + "\n";
-		 
+		  dialog = dialog  +  '\r' + "\n";
 		 document.mainscreen.BasicTextArea4.value = ""
 		updatescreen() 
             }
@@ -38,18 +38,8 @@ function checkToken(result)
               return("error");
             }
         })
-		 
-	 botMessage = shortAnswers(tempResult);
-		 console.log(botMessage)
-		 var out = "" + botMessage.data 
-			console.log(out)
-		 
-	 	document.mainscreen.BasicTextArea4.value = ""
-		  dialog = dialog + "Narada Muni : " + out +  '\r' + "\n";
-		 
-		 document.mainscreen.BasicTextArea4.value = ""
-		updatescreen() 
-	 }
+	
+}
 	 
 	 else if(result.includes("Temperature") || result.includes("temperature") || result.includes("Weather") || result.includes("weather"))
 	 {
@@ -79,6 +69,7 @@ function checkToken(result)
 		    
 	 	document.mainscreen.BasicTextArea4.value = ""
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+		     dialog = dialog  +  '\r' + "\n";
 		 document.mainscreen.BasicTextArea4.value = ""
 		 updatescreen()
               return output;
@@ -108,6 +99,7 @@ function checkToken(result)
 		    
 	 	document.mainscreen.BasicTextArea4.value = ""
                 dialog = dialog + "Narada Muni : " + botMessage +  '\r' + "\n";
+		     dialog = dialog  +  '\r' + "\n";
 	 	document.mainscreen.BasicTextArea4.value = ""
      		updatescreen()
 		    //              return out;
