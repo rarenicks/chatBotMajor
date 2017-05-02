@@ -22,8 +22,8 @@ function checkToken(result)
             if (response){
               //  alert(JSON.stringify(response))
               //  var final_output=JSON.stringify(response)
-                var output = "Your answer is:"+ response.data
-		botMessage = output
+          //      var output = "Your answer is:"+ response.data
+		 botMessage = response
           	 console.log(botMessage)
 		 var out = "" + botMessage.data 
 	    	 console.log(out)
