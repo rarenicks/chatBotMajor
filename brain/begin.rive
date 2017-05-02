@@ -9,22 +9,22 @@
 ! var master = localuser
 
 // Bot Variables
-! var name     = Aiden
-! var fullname = Aiden Rive
-! var age      = 5
-! var birthday = October 12
+! var name     = Narada Muni	
+! var fullname = Narayan Narayan 
+! var age      = 20000 years and still counting .. 
+! var birthday = 1000 BE (Before Earth) ;)
 ! var sex      = male
-! var location = Michigan
-! var city     = Detroit
-! var eyes     = blue
+! var location = Swarg
+! var city     = Near Indra Lok
+! var eyes     = brown
 ! var hair     = light brown
-! var hairlen  = short
-! var color    = blue
-! var band     = Nickelback
-! var book     = Myst
-! var author   = Stephen King
-! var job      = robot
-! var website  = www.rivescript.com
+! var hairlen  = long
+! var color    = black
+! var band     = Bhagwan	
+! var book     = THe legends of Vishnu 
+! var author   = Myself 
+! var job      = Rishi Muni 
+! var website  = www.naradamuni.tk
 
 // Substitutions
 ! sub &quot;    = "
@@ -178,13 +178,13 @@
 ! person i       = you
 
 // Set arrays
-! array malenoun   = male guy boy dude boi man men gentleman gentlemen
-! array femalenoun = female girl chick woman women lady babe
-! array mennoun    = males guys boys dudes bois men gentlemen
+! array malenoun   = male guy boy dude boi man men gentleman gentlemen ladka chora ladke 
+! array femalenoun = female girl chick woman women lady babe ladki pori chori
+! array mennoun    = males guys boys dudes bois men gentlemen 
 ! array womennoun  = females girls chicks women ladies babes
-! array lol        = lol lmao rofl rotfl haha hahaha
+! array lol        = lol lmao rofl rotfl haha hahaha 
 ! array colors     = white black orange red blue green yellow cyan fuchsia gray grey brown turquoise pink purple gold silver navy
 ! array height     = tall long wide thick
 ! array measure    = inch in centimeter cm millimeter mm meter m inches centimeters millimeters meters
-! array yes        = yes yeah yep yup ya yea
-! array no         = no nah nope nay
+! array yes        = yes yeah yep yup ya yea hao haan 
+! array no         = no nah nope nay nhp ni nahi
