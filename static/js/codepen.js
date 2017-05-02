@@ -11,7 +11,32 @@ function checkToken(result)
 	 
 	 if(result.includes("?"))
 	 {
-	 
+	  $.ajax({
+        data:{
+            question:ques
+        },
+        type:'POST',
+        url:'/v1'
+	  })
+        .done(function(response){
+            if (response){
+              //  alert(JSON.stringify(response))
+              //  var final_output=JSON.stringify(response)
+                var output = "Your answer is:"+ response.data
+		botMessage = output
+          	 console.log(botMessage)
+		 var out = "" + botMessage.data 
+	    	 console.log(out)
+		  dialog = dialog + "Narada Muni : " + out +  '\r' + "\n";
+		 
+		 document.mainscreen.BasicTextArea4.value = ""
+		updatescreen() 
+            }
+            else{
+              return("error");
+            }
+        })
+		 
 	 botMessage = shortAnswers(tempResult);
 		 console.log(botMessage)
 		 var out = "" + botMessage.data 
