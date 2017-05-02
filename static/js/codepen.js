@@ -246,18 +246,7 @@ console.log('it works!!')
 function chatbotResponse() {
   checkToken(lastUserMessage)
   }
-  // else {
-  //    city = lastUserMessage;
-  //
-  //       var replyFromWeatherAPI = tempCall(city);
-  //       $( document ).ajaxStop(function() {
-  //       botMessage  = replyFromWeatherAPI;
-  //       });
-  //
-  //   }
   
-    
-}
 
 function clearScreen() {
 	document.mainscreen.BasicTextArea4.value = ""
