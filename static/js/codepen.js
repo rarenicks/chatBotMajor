@@ -13,7 +13,7 @@ function checkToken(result)
 	 {
 	  $.ajax({
         data:{
-            question:ques
+            question:result
         },
         type:'POST',
         url:'/v1'
