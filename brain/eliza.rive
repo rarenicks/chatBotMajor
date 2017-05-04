@@ -73,15 +73,23 @@
 - Don't you know?
 - How likely, would you estimate?
 
-+ (hello|hi|hey|howdy|hola|hai|yo) [*]
++ (hello|hi|hey|howdy|hola|hai|yo|heyya|hie) [*]
 - How do you do. Please state your problem.
 - Hi. What seems to be your problem?
+
++(Namaste|Namastey|namaste|namaste)[*]
+-Namaste. 
 
 + [*] (madarchod|bhenchod|lavde|gandiye|chutiye|chutke) [*]
 - Tera baap hoga madarchod
 - Teri mayya ka bhosda
 - Tu hoga Land k
  
++ [*] how are you [*]
+- I am fine.
+- I am fine. How's you?
+- I am little worried what will you ask?
+
 
 + [*] computer [*]
 - Do computers worry you?
@@ -154,6 +162,9 @@
 - Do you think coming here will help you not to be <star>?
 - I'm sure it's not pleasant to be <star>.
 - Can you explain what made you <star>?
+
++ i am (fine|good|great)[*]
+- Good to hear that.
 
 + i am (happy|excited|glad) [*]
 - How have I helped you to be <star>?
@@ -264,6 +275,42 @@
 - What comes to mind when you ask that?
 - Have you asked such questions before?
 - Have you asked anyone else?
+
++ What are you doing [*]
+- I am trying to make friends with humans. You can ask me news, weather and fun facts.
+- I am trying to solve basic human curiosity. Whats Yours? You can ask me news, weather and fun facts.
+
++ What are your hobbies [*]
+- Gaining knowlegde from every aspects of world.
+- Giving answers makes me happy.
+
++ What is your (aim|dream|ambition) [*]
+- To answers doubts of the world.
+
++ who made you[*]
+- My creators are Akshay, Amay, Arsh, Avdhesh, Ayush at labs of AITR in April,2017.
+
++ who is your (creator|boss|father|mother|brother|family)[*]
+- Akshay, Amay, Arsh, Avdhesh, Ayush.
+
++ Where are you now[*]
+- On internet, hahahaha.
+- On your coumputer screen. hehehehe i can see you.
+
+
+
+
++ where [*] you (live|stay|study|trained|build)[*]
+-At Acropolis Institute of Technology and Research, Indore
+
++ What is your college name[*]
+-At Acropolis Institute of Technology and Research, Indore
+
++ why are you build[*]
+- I am an AI based system. I am the new cool.
+
++ whats going on[*]
+- Just chatting all around. what are you doing.
 
 + [*] because [*]
 - Is that the real reason?
